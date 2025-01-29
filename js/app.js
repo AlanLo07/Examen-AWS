@@ -20,7 +20,7 @@ clientes = [
 console.log(clientes);
 
 
-fetch("https://l52pbrh853.execute-api.us-east-2.amazonaws.com/prod/clientes")
+fetch("https://71uxoujc7c.execute-api.us-east-2.amazonaws.com/prod/clientes")
         .then(response => response.json()) // Convertir la respuesta a JSON
         .then(data => {
             console.log("Datos obtenidos:", data);
@@ -30,7 +30,7 @@ fetch("https://l52pbrh853.execute-api.us-east-2.amazonaws.com/prod/clientes")
                     const div = document.createElement('a');
                     div.textContent = `${cliente.nombres} ${cliente.apellidoPaterno} ${cliente.apellidoMaterno} [${cliente.id}]`;
                     div.className = 'list-group-item list-group-item-action';
-                    div.href = `cliente.html?id=${cliente.id}`;
+                    div.href = `compponents/creditos.html?id=${cliente.id}`;
                     return div;
                 }).reduce((fragment, div) => {
                     fragment.appendChild(div);
