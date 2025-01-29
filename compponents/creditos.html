@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Clientes</title>
+    <title>Creditos</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
 </head>
@@ -12,22 +12,32 @@
 <body>
     <!-- Sección para mostrar los datos capturados -->
     <div class="mt-4 p-4 border rounded">
-        <h3>Clientes:</h3>
-        <div id="clientes-container" class="list-group">
-            <!-- Aquí se mostrarán los clientes -->
-        </div>
+        <h3>Cliente: 1</h3>
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Numero de credito</th>
+                <th scope="col">monto</th>
+                <th scope="col">plazo</th>
+                <th scope="col">tasa anual</th>
+              </tr>
+            </thead>
+            <tbody id="creditos-container">
+              
+            </tbody>
+          </table>
     </div>
 
-    <a class="btn btn-primary" role="button" aria-disabled="true" href="/compponents/nuevoCliente.html">Nuevo cliente</a>
+    <a class="btn btn-primary" role="button" aria-disabled="true" href="/compponents/nuevoCredito.html">Nuevo credito</a>
+    <a class="btn btn-secondary" role="button" aria-disabled="true" href="/index.html">Regresar</a>
     
 
     <!-- Bootstrap JS y dependencias -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
-    <script src="js/api.js"></script>
-    <script src="js/app.js"></script>
 
     <!-- Script para manejar el formulario -->
+    <script src="../js/utils.js"></script>
 </body>
 
 </html>
