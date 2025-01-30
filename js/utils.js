@@ -1,7 +1,13 @@
-
-
 const params = new URLSearchParams(window.location.search);
 const cliente_id = params.get("id");
+const a = document.createElement('a');
+a.textContent = 'Nuevo Credito';
+a.className = 'btn btn-primary';
+a.href = `./nuevoCredito.html?id=${cliente_id}`;
+document.getElementById('nuevo-credito').appendChild(a);
+
+
+
 fetch("https://71uxoujc7c.execute-api.us-east-2.amazonaws.com/prod/creditos/" + cliente_id)
     .then(response => response.json()) // Convertir la respuesta a JSON
     .then(data => {
@@ -14,7 +20,7 @@ fetch("https://71uxoujc7c.execute-api.us-east-2.amazonaws.com/prod/creditos/" + 
                 const div = document.createElement('a');
                 div.textContent = `${credito.id}`;
                 div.className = 'list-group-item list-group-item-action';
-                div.href = `compponents/creditos.html?id=${credito.id}`;
+                div.href = `./amortizaciones.html?id=${cliente_id},id_credito=${credito.id}`;
                 const monto = document.createElement('td');
                 const plazo = document.createElement('td');
                 const tasaAnual = document.createElement('td');
@@ -38,4 +44,5 @@ fetch("https://71uxoujc7c.execute-api.us-east-2.amazonaws.com/prod/creditos/" + 
     })
     .catch(error => console.error("Error en la solicitud:", error));
 console.log("Solicitud realizada");
+
 
